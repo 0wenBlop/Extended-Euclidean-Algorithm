@@ -19,7 +19,7 @@ class GCD:
         self.result = []
         self.gcd = self.euclidean_algo()
 
-        self.linear_combination = [0, 0, 0, 0, 0]  # [gcd, s, a, t, b]
+        self.linear_combination = []  # [gcd, s, a, t, b]
 
     def __str__(self):
         if len(self.result[-1]) != 2:
@@ -43,25 +43,19 @@ class GCD:
     def extended(self):
         print(">> ", end="")
         if len(self.result[0]) != 2:
-            # In the form where they are perfect multiples
+            # In the form where they are perfect multiple
             if len(self.result) == 1:
                 a, b, q, r = self.result[0]
-                self.linear_combination[0] = r
-                self.linear_combination[1] = 1
-                self.linear_combination[2] = a
-                self.linear_combination[3] = -q
-                self.linear_combination[4] = b
+                self.linear_combination = [r, 1, a, -q, b]
+
             else:
                 for step in range(len(self.result)-2, -1, -1):
                     a, b, q, r = self.result[step]
 
                     if step == len(self.result) - 2:
                         # Initialize linear combination
-                        self.linear_combination[0] = r
-                        self.linear_combination[1] = 1
-                        self.linear_combination[2] = a
-                        self.linear_combination[3] = -q
-                        self.linear_combination[4] = b
+                        self.linear_combination = [r, 1, a, -q, b]
+
                     else:
                         pos = 2 if self.linear_combination[2] == r else 4
 
