@@ -10,7 +10,7 @@ py3 <file_name> a b
 ```
 
 ## Input constraints
-Since `int` type in python3 does not have a fixed length, the input size constraint depends on the hardware. For example, the acceptable range on a 64-bit machine is -2<sup>63</sup>≤ `num` ≤ 2<sup>63</sup>-1. Note that (a,b)≠(0,0) as this GCD is not defined.
+Since `int` type in python3 does not have a fixed length, the input size constraint depends on the hardware. For example, the acceptable range on a 64-bit machine is -2<sup>63</sup> ≤ `num` ≤ 2<sup>63</sup>-1. Note that (a,b)≠(0,0), as this GCD is not defined.
 
 ## Note
 Although the program accepts negative numbers as input, the program takes the absolute values before doing any operations. The GCD should remain unchanged, but the linear combination formula will be changed.
