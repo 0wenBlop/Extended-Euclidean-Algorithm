@@ -69,7 +69,7 @@ One of the numbers is negative
 >> The GCD of 12378 and 972 is: 6
 >> 6 = 624 x 972 + -49 x 12378
 ```
-Both numbers is negative
+Both numbers are negative
 ```bash
 >> python3 euclidean_algo.py -1956 -198236
       a     b    q    r
