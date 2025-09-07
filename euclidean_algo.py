@@ -43,7 +43,7 @@ class GCD:
     def extended(self):
         print(">> ", end="")
         if len(self.result[0]) != 2:
-            # In the form where they are perfect multiple
+            # In the form where they are perfect multiples
             if len(self.result) == 1:
                 a, b, q, r = self.result[0]
                 self.linear_combination[0] = r
@@ -74,6 +74,9 @@ class GCD:
 
 
 if __name__ == "__main__":
-    gcd = GCD(int(sys.argv[1]), int(sys.argv[2]))
-    print(gcd)
-    gcd.extended()
+    try:
+        gcd = GCD(int(sys.argv[1]), int(sys.argv[2]))
+        print(gcd)
+        gcd.extended()
+    except IndexError as e:
+        print("Error: Too little argument")
