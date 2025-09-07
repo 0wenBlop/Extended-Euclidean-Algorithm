@@ -1,4 +1,4 @@
-# Extended-Euclidean-Algorithm
+# Extended Euclidean Algorithm
 An algorithm to efficiently calculate the GCD of two numbers.
 
 ## Usage
